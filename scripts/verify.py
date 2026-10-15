@@ -98,7 +98,12 @@ def tables(daily):
                 status='settled' if len(good)==len(rows) else 'prices_pending',**totals(rows),
                 pnl=round(math.fsum(p),4) if p else '',mean_day_pnl=round(st.mean(p),6) if p else '',worst_day_pnl=min(p) if p else '')))
         result[name]=periods
-    start,end=daily[0]['date'],daily[-1]['date'];ranges=[('full_displayed_history',start,end)]
+    start,end=daily[0]['date'],daily[-1]['date']
+    ranges=[('timestamped_from_2026-10-11','2026-10-11',end),
+            ('legacy_development_2024-01-01_to_2025-06-30','2024-01-01','2025-06-30'),
+            ('legacy_seen_2025-07-01_to_2026-09-30','2025-07-01','2026-09-30'),
+            ('reconstructed_A4_2026-10-01_to_2026-10-10','2026-10-01','2026-10-10'),
+            ('full_displayed_history',start,end)]
     for year in range(int(start[:4]),int(end[:4])+1):
         ranges.append((str(year)+('_to_date' if str(year)==end[:4] and end[5:]!='12-31' else ''),max(start,f'{year}-01-01'),min(end,f'{year}-12-31')))
     y=end[:4]

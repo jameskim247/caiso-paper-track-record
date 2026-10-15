@@ -11,7 +11,7 @@
   "files_sha256": {
     "daily.csv": "5ba7f287e8d231ec7992d826273d2a39e203f6dd6043de9567e9274703a9387c",
     "monthly.csv": "7fe3805ec68a3888187e3aaa9a6b766d28bdefa96179d35b3e48a334f2e9dd71",
-    "summary.csv": "c66dbd6409d63d47e4e89f42c471a3869b39e23f82734c67352a4fcf8c0c2532",
+    "summary.csv": "8f482ae7eb6ce777e5b7cd64305a5389c553cfd781ff0c465789809876c5e6e5",
     "weekly.csv": "e30e486d28ca826ed26b64803f9fe214009ee185e9aae119edca26b260f2bb33"
   },
   "historical_evidence": "retrospective_legacy_research_not_A4",
@@ -1177,7 +1177,7 @@
     "rc_tier1_central.csv": "1cb1f17dda19fbb5a5c1981af9660399432a1abb72536675f1afb80405d2bb69"
   },
   "source_frozen_specification_sha256": "d8a1e16f28227a723128184f26a785eccdcfb762f76545136ac9edb4e67add00",
-  "source_package_sha256": "83c43995726f85525eeb5340871ef0c25eed1cd9e5f08fc63a05f220d6218927",
+  "source_package_sha256": "bc49d7f44a3a168520aa50b654ca103897a4058b364f5b38dfefaf8c44388e77",
   "template_commit": "c7545550fccca41693e9f8c5d870b39046dc9a33",
   "template_repository": "jameskim247/ptp-track-record",
   "unresolved_execution": {},
