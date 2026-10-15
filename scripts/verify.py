@@ -168,10 +168,26 @@ def verify(root,now=None,require_current=False):
     daily_by_book={};observations={}
     for book,folder in FOLDERS.items():
         anchor=json.loads((root/folder/'source_anchor.json').read_bytes());receipt=json.loads((root/folder/'publication.json').read_bytes())
-        check(set(anchor)=={'schema','book','record_start','record_end','source_package_sha256','source_frozen_specification_sha256',
+        base_fields={'schema','book','record_start','record_end','source_package_sha256','source_frozen_specification_sha256',
             'quantity_multiplier','public_cost_per_awarded_mwh','modeled_uplift_by_date','historical_evidence','history_end',
             'prospective_first_operating_day','source_files_sha256','files_sha256','assumptions','historical_strict_price_tie_days',
-            'template_repository','template_commit'},'source-anchor field inventory mismatch')
+            'template_repository','template_commit'}
+        check(set(anchor) in (base_fields,base_fields|{'historical_recovery','unresolved_execution','verified_model_net_range'}),'source-anchor field inventory mismatch')
+        recovery=anchor.get('historical_recovery')
+        if recovery:
+            check(set(recovery)=={'schema','signal','packet_sha256','frozen_programme_sha256','evidence_basis','raw_source_sha256','records'},'recovery field inventory mismatch')
+            check(recovery['schema']=='caiso-october-recovery-v1' and recovery['signal']=='6b72eba552ec' and
+                recovery['evidence_basis']=='retrospective_reconstruction' and recovery['frozen_programme_sha256']==anchor['source_frozen_specification_sha256'],
+                'recovery changed the frozen rule or evidence basis')
+            check(HEX.fullmatch(recovery['packet_sha256']) and all(HEX.fullmatch(x) for x in recovery['raw_source_sha256']),'recovery source digest mismatch')
+            check(set(recovery['records'])=={'2026-10-'+str(i).zfill(2) for i in range(1,11)},'recovery date inventory mismatch')
+            for record in recovery['records'].values():
+                check(set(record)=={'status','decision_proof_id','settlement_proof_id','source_proof_id','net_lower_usd','net_upper_usd'},'recovery record field mismatch')
+                check(record['status'] in ['settled','execution_pending'] and all(HEX.fullmatch(record[k]) for k in
+                    ['decision_proof_id','settlement_proof_id','source_proof_id']),'unverified recovery observation')
+                if record['status']=='execution_pending':
+                    check(all(isinstance(record[k],(int,float)) and math.isfinite(record[k]) for k in ['net_lower_usd','net_upper_usd']) and
+                        record['net_lower_usd']<=record['net_upper_usd'],'unresolved recovery lacks valid bounds')
         check(set(receipt)=={'checked_through','missing_result_days','record_end','record_start','source_package_sha256','state','status'},'publication field inventory mismatch')
         check(set(anchor['source_files_sha256'])=={'baseline_daily.csv','exposure.csv','baseline_verification.json','g3_U2.npz',
             'G5F_U2_test_orders.npz','rc_tier1_central.csv','cb_awards_hourly.csv'} and
@@ -208,7 +224,41 @@ def verify(root,now=None,require_current=False):
                     check(row['decision_proof_id']==p['decision_sha256'],'decision binding changed')
             else:
                 check(all(row[k]=='' for k in ['pnl','gross_pnl','cumulative_pnl','pnl_drawdown','awarded_mw','fill_rate','pending_awarded_mw']),'pending value replaced by zero')
-            if '2026-10-01'<=row['date']<='2026-10-10':check(row['status']=='source_missing','unproven historical gap filled')
+            if '2026-10-01'<=row['date']<='2026-10-10':
+                if not recovery:check(row['status']=='source_missing','unproven historical gap filled')
+                else:
+                    r=recovery['records'][row['date']]
+                    check(row['status']==r['status'] and all(row[k]==r[k] for k in ['decision_proof_id','settlement_proof_id','source_proof_id']),
+                          'recovered row is not bound to its verified source')
+        if recovery:
+            unresolved=anchor['unresolved_execution']
+            check(set(unresolved)==({'2026-10-14'} if book=='FX' else set()),'unresolved audit date mismatch')
+            for day,bound in unresolved.items():
+                fields={'book','operating_day','signal','decision_proof_id','original_settlement_proof_id','source_sha256','net_lower_usd','net_upper_usd',
+                    'award_lower_mwh','award_upper_mwh','frozen_fee_per_cleared_mwh','original_modeled_uplift_retained','independent_endpoint_check',
+                    'point_result_identified','no_actual_order_was_submitted','reason'}
+                check(set(bound)==fields and bound['book']==book and bound['operating_day']==day and bound['signal']=='6b72eba552ec','unresolved audit field mismatch')
+                check(not bound['point_result_identified'] and bound['independent_endpoint_check'] and bound['frozen_fee_per_cleared_mwh']==.5,
+                      'unsupported marginal-award resolution')
+                check(all(isinstance(bound[k],(int,float)) and math.isfinite(bound[k]) for k in ['net_lower_usd','net_upper_usd','award_lower_mwh','award_upper_mwh']) and
+                      bound['net_lower_usd']<=bound['net_upper_usd'] and bound['award_lower_mwh']<=bound['award_upper_mwh'],'invalid execution bounds')
+                r=next(r for r in daily if r['date']==day)
+                check(r['decision_proof_id']==bound['decision_proof_id'],'execution audit decision mismatch')
+                if r['settlement_proof_id']==bound['original_settlement_proof_id']:
+                    check(r['status']=='execution_pending','unidentified marginal award promoted to a point result')
+            intervals=[];unbounded=[]
+            for r in daily:
+                if r['status']=='settled':continue
+                b=recovery['records'].get(r['date']);u=unresolved.get(r['date'])
+                if b and b['net_lower_usd'] is not None:intervals.append((b['net_lower_usd'],b['net_upper_usd']))
+                elif u and r['settlement_proof_id']==u['original_settlement_proof_id']:intervals.append((u['net_lower_usd'],u['net_upper_usd']))
+                else:unbounded.append(r['date'])
+            value=anchor['verified_model_net_range'];known=math.fsum(r['pnl'] for r in daily if r['status']=='settled')
+            check(set(value)=={'known_observation_net_usd','bounded_pending_days','unbounded_days','lower_usd','upper_usd','scope'},'net-range field inventory mismatch')
+            check(abs(value['known_observation_net_usd']-known)<.001 and value['bounded_pending_days']==len(intervals) and value['unbounded_days']==unbounded,'net-range coverage mismatch')
+            if unbounded:check(value['lower_usd'] is None and value['upper_usd'] is None,'unbounded missing cash reported as finite')
+            else:check(abs(value['lower_usd']-known-math.fsum(x[0] for x in intervals))<.001 and
+                abs(value['upper_usd']-known-math.fsum(x[1] for x in intervals))<.001,'net-range arithmetic mismatch')
         recomputed=tables(daily)
         check(all(data[n]==recomputed[n] for n in ['weekly.csv','monthly.csv','summary.csv']),'aggregate arithmetic mismatch')
         check(receipt['record_start']==START and receipt['record_end']==identity['record_end'],'publication range mismatch')

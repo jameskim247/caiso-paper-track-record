@@ -9,12 +9,136 @@
   ],
   "book": "FX",
   "files_sha256": {
-    "daily.csv": "52d4a37a3b5c3c7bf837741a0e28ce6abbd185f0f325b920f1a38d14e27c9c9e",
-    "monthly.csv": "06db8436d02201ad3994051efa59e860ada0c1967e2eae137579eaaa31ed7d47",
-    "summary.csv": "0de532a65dfeffe56148c0d351774217e1e39ba4ff68a8482b04061c5ab4b895",
-    "weekly.csv": "c454a10781a345652d68979602146898f4acf3b4152bac7e389ad8973ee056f0"
+    "daily.csv": "26a96cbd851adfbb16a7ef79f084d63b9696696bc87f68955663ce43c3316c31",
+    "monthly.csv": "566e61349cfd44ea4279972d61881a5da8329c33ab4dc97c604348e9e72a2c6d",
+    "summary.csv": "ec1de7e8c4d6a3ae4e884d62463ec06b039e8ea3d796aae0c12c6fbc1a92a061",
+    "weekly.csv": "7e26aa6e58de682bbdd7a2a3b8804147ec3e853684474cacd6aad407c4fa6033"
   },
   "historical_evidence": "retrospective_legacy_research_not_A4",
+  "historical_recovery": {
+    "evidence_basis": "retrospective_reconstruction",
+    "frozen_programme_sha256": "d8a1e16f28227a723128184f26a785eccdcfb762f76545136ac9edb4e67add00",
+    "packet_sha256": "0b5affd8f9a39f57824f07891a6caf84d5a609af5649a920f2b5409db635503c",
+    "raw_source_sha256": [
+      "7cdf1a7f4a5cf31178264ffb481ab03381a72aa659cc0f78befcd12f640acd37",
+      "67a06db9a300637334b591ac6812627420d7f10d890df7a635f488c0779a4c8b",
+      "1bfb7a8f60dfaec5e756f3f8c2dce93dcc1d724f728c4180d06c1ea599b9b253",
+      "90776b5e4975694ec51ff87cd02df07e7df5e5bacaae12b6ebf0371d884cd1d4",
+      "09e180a45bd60d89b64f94fa5d0198861aa007a03da9f040160ee334ae045015",
+      "1c81cde8978cd6db66b03ea5d9b855ec4068069fc734850ace56d9dbe431cd93",
+      "e011e077a63c6eba637cfd3edd4159057a8703728a0880960a4a1b4d384bbe4f",
+      "736f4cdfefea2f6658332c9a051ea42b975ea09467a84925510939f7ffa4a054",
+      "b4c5ede44b7d07939def48891ab399b7bc15a29d46afdb5af24d2d0f5d491a5c",
+      "4c0391bcc30015be367bb98e7d394ae99dea56a3ecdcc036cb36b373a9df653d",
+      "1436a5b9f26391adfda7163abc318816bfb2563a14450cb21839049c12bcec8a",
+      "f34c1a652571d16cf9e195954e06559122044e9724993e082db30e767f1af32d",
+      "a36c7347e30f7ed16aa4a272b9f8b2c135d8d01264b061f3a3e7fe966edd9cf0",
+      "bd32a544f5f6c39fc8554f3b0cfeb2cdc6b23bf728614f12a422b7b29897f121",
+      "e4821c452328784c119da157b4fa87d63093ba0822b926622069f155c9d7e9de",
+      "8a9a705a50f143bed04d6bb0b7177d796b348aee87e402eac5f63ba3f3fd7dbb",
+      "02009e16d8dfeed6209fa4b3a9f278c89672b298d9e9948f9e1d2de8c4bd2b94",
+      "6d6f59f9472f155bf8751f5e5ccc2a466c7a252feba9cdb5bd1455ed281443df",
+      "2eecce9a8b81c85245ad4a7265e428deef8fbded03e44868496fe8112850e7a3",
+      "db7dfe657c2186a101fe35babc1a0cafc3d7888181fb6c986a9aa37fb1ebae11",
+      "8373380fb9358c745b392217f46b6cfb221154bebc8a6d324d0a4881bd64abf5",
+      "d6602322336f67f22016ef2a7a5d0258110ba5b5d992824f923fcdd8528182cb",
+      "1d2bd60badf2b6c2b2746a4352b6872299d40e02e790e2c135799dc6da6ff4a1",
+      "ad6c9123311a01296b90a5f17afde56fb50f659fd7d154c593c5654c45146d66",
+      "1e7bdbd13d0d1e8cb99149f4f280254ad831173904d1222d1229e3d5cce4bd99",
+      "8cfce84143fc17122ecf3e6575a7efc856df9449e3cb7a561e82247d7fc13b64",
+      "baa8f22c659776227260d41df1dcebcafab9ec65bfff5795a1f1f96d860e0ded",
+      "ee95e21b7c1f9c2468d8ff7de430e09ccb903fe4fee5e55d456683f11cacf3ce",
+      "0ea97cb6667e89a10ab3a9f7950e33097eeb2cea926bea052f88f50d54ec752e",
+      "14ee45e3367374eae6b8dcc54cb23a443cc094e8c6e8101793fdb80d7357e3a8",
+      "d760f9a425acf276cb62a150853cec9630d2843b5108173c5f169c10c3df0920",
+      "37cbb45b78caacd2bc29db1ab98830aa4eca1d36e0d67106bbff743cf7f15a40",
+      "de570de0791c4f94f1fa35d108d6705d9cb1de3f5731e458b8487e867177fbc9"
+    ],
+    "records": {
+      "2026-10-01": {
+        "decision_proof_id": "73f4dfe40392b1dd750b31c9ee3aee069819b12f237f27afe598f0d063c41137",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "f7ec9536f13e1d863ab4a30b7695a1d690b88f6065b2f58cb175096b8ac3b687",
+        "source_proof_id": "c7ecb7f1e7aa2751f97c8efcc3509b0d379e02cca3ff520f79da5201c76a899b",
+        "status": "settled"
+      },
+      "2026-10-02": {
+        "decision_proof_id": "45a72e6acc5f767d7e78fc157997d26b3e32a28ab916c9ea69c23261790603a0",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "130f07707adabad6acfa4323a665feee9d1dc1429be6159dfe45ff3499b44223",
+        "source_proof_id": "44db3613c869e856af6bd120ff811fa958d0e5163a66ae2f04ed361122da9572",
+        "status": "settled"
+      },
+      "2026-10-03": {
+        "decision_proof_id": "84a9dd358825fa936c52516acb5b49e0b2090924d524ca83125971bdec83e901",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "ae2cad6e80e34e392dcdb23b63dadc73c0a6fada111a76197064aeb8c0cfb38f",
+        "source_proof_id": "be0c0e9bf30050357d51247de8b503219f2549031e5a713ba07740157a007397",
+        "status": "settled"
+      },
+      "2026-10-04": {
+        "decision_proof_id": "8c0e0eb6af28966114cb0d674dba19dcea9e614ca9840b9efdeef6136fc648ab",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "3aba266f188ffadbecd8fd3a165ce3f60ff7f8306a46935d502bba437d01ad7b",
+        "source_proof_id": "2e0c427ea99ea75d0056b3983f0486d026ad662f10d4de7b9dac4c45228fbf5c",
+        "status": "settled"
+      },
+      "2026-10-05": {
+        "decision_proof_id": "bb7ab4e74abcbb4892ade4ed63e7cce1996e35ea6a2275e4b2f4d0fa3dd77baf",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "7e061ef58bf2ad1f1bc2d19a770613501783d57a3461a067e87149b3ff96ab85",
+        "source_proof_id": "757bb279a17daa376545013f41c9abfd3e446f58c1c6e83eb8844b9829c41a84",
+        "status": "settled"
+      },
+      "2026-10-06": {
+        "decision_proof_id": "6ae186bf782b8fa1764a244230c000d0a1565008fbcccf4f790d8f38d67cd8e1",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "5c50f1c6433b717cf15c19e34560793c3668d819950da7780e1ed3f44b28be44",
+        "source_proof_id": "a634532140a236bc82e4a5a6f4ff328a78c97fbb0f1ad0765b7d9cf335beee54",
+        "status": "settled"
+      },
+      "2026-10-07": {
+        "decision_proof_id": "046beb15a44710c9fe7222075b4d17fc5161e89b9cfb852919abfe83f598cf57",
+        "net_lower_usd": -5005.69857,
+        "net_upper_usd": -4018.6388099999995,
+        "settlement_proof_id": "6c3c5a90bb2b1eff43a820e3e08b72c07b407f9c92fb70762c278c3a8bd4c390",
+        "source_proof_id": "e1c84cfa1c47f3d5f311c2cd6392c787310d78517914695ee0695deb248e564f",
+        "status": "execution_pending"
+      },
+      "2026-10-08": {
+        "decision_proof_id": "f201c2e96d17c39caf7e9c88183a0edcbb1bd5086099f37865f1eb15cc7a5ee5",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "060adc126b186230e0626a9d05baa487d824d7e1d025ab8656d73b4b8278c052",
+        "source_proof_id": "548650d17b88094176693cc6f816f28884ed7bda135c2125f868b540f3be16c8",
+        "status": "settled"
+      },
+      "2026-10-09": {
+        "decision_proof_id": "db60d412782af850161fdf72418a84e99bc55e8a135f268d8566816f8cc67cc8",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "29b598b997a713ea48c1b141bf062df8bcbd3772452b12e08dadb2f67d8b8b53",
+        "source_proof_id": "ca4cea92d4c935747abcb3d8cd134dfecaea86811f5140cc9ce0baad3db159c8",
+        "status": "settled"
+      },
+      "2026-10-10": {
+        "decision_proof_id": "f8393daa54d1173ada7527c97ac47a9ebcdcf02854ad15a461e6bb98499aae31",
+        "net_lower_usd": null,
+        "net_upper_usd": null,
+        "settlement_proof_id": "0f31d3f833cf6eb8d124ff40ba0a35c28f5dcc959b00a99202134ddf91c616a4",
+        "source_proof_id": "42c5ed30970505385f82f0eff7039720430d56bc8b237023a6177813e2cf8621",
+        "status": "settled"
+      }
+    },
+    "schema": "caiso-october-recovery-v1",
+    "signal": "6b72eba552ec"
+  },
   "historical_strict_price_tie_days": 72,
   "history_end": "2026-09-30",
   "modeled_uplift_by_date": {
@@ -1022,6 +1146,15 @@
     "2026-09-28": 12.88,
     "2026-09-29": 0.0,
     "2026-09-30": 10.739999999999998,
+    "2026-10-01": 42.0,
+    "2026-10-02": 0.0,
+    "2026-10-03": 0.0,
+    "2026-10-04": 0.0,
+    "2026-10-05": 0.0,
+    "2026-10-06": 0.0,
+    "2026-10-08": 0.0,
+    "2026-10-09": 0.0,
+    "2026-10-10": 0.0,
     "2026-10-11": 0.0,
     "2026-10-12": 0.0,
     "2026-10-13": 0.0
@@ -1042,7 +1175,38 @@
     "rc_tier1_central.csv": "1cb1f17dda19fbb5a5c1981af9660399432a1abb72536675f1afb80405d2bb69"
   },
   "source_frozen_specification_sha256": "d8a1e16f28227a723128184f26a785eccdcfb762f76545136ac9edb4e67add00",
-  "source_package_sha256": "f991039474fb03d1c0c41568d6f7522bfba6d664cdf9fcac7dd7a2de2d4f6473",
+  "source_package_sha256": "161234dbddfb18029b684ab2d7eb76f20ec609a0b1db15d8b6e73e9ab849b48f",
   "template_commit": "c7545550fccca41693e9f8c5d870b39046dc9a33",
-  "template_repository": "jameskim247/ptp-track-record"
+  "template_repository": "jameskim247/ptp-track-record",
+  "unresolved_execution": {
+    "2026-10-14": {
+      "award_lower_mwh": 958.0,
+      "award_upper_mwh": 960.0,
+      "book": "FX",
+      "decision_proof_id": "590161594983ba6648755d9f12bf18f9fc6869e1bc70feccfb4f1b1aba0367d8",
+      "frozen_fee_per_cleared_mwh": 0.5,
+      "independent_endpoint_check": true,
+      "net_lower_usd": -1048.97315,
+      "net_upper_usd": -743.401705,
+      "no_actual_order_was_submitted": true,
+      "operating_day": "2026-10-14",
+      "original_modeled_uplift_retained": true,
+      "original_settlement_proof_id": "c46c6dc179e1eff522121f781263dfcdc8c49486498fdf10e7db88132676dfa8",
+      "point_result_identified": false,
+      "reason": "Public prices do not determine an unsubmitted marginal virtual award at the bid limit",
+      "signal": "6b72eba552ec",
+      "source_sha256": [
+        "7cdf1a7f4a5cf31178264ffb481ab03381a72aa659cc0f78befcd12f640acd37",
+        "67a06db9a300637334b591ac6812627420d7f10d890df7a635f488c0779a4c8b"
+      ]
+    }
+  },
+  "verified_model_net_range": {
+    "bounded_pending_days": 2,
+    "known_observation_net_usd": 1756579.6975,
+    "lower_usd": 1750525.02578,
+    "scope": "displayed history conditional on stated historical prices and fill assumptions; not a confidence interval",
+    "unbounded_days": [],
+    "upper_usd": 1751817.656985
+  }
 }
