@@ -13,6 +13,6 @@ Ranges reflect unknown awards, not confidence intervals. No funded trades.
 
 Pending FX: 2026-10-07, 2026-10-14.
 
-Updated 2026-10-16 17:50 UTC · Bid proofs through 2026-10-16.
+Updated 2026-10-16 18:20 UTC · Bid proofs through 2026-10-16.
 
 [Records and assumptions](README.md)
