@@ -9,10 +9,10 @@
   ],
   "book": "F_BROAD",
   "files_sha256": {
-    "daily.csv": "26935d2634efeb47b892eb242539027bbd44d9bc684597b54d68f2b68dfe6c2a",
-    "monthly.csv": "63c993279ab076ff6166683348a4620d876a7301926656763703dc635d9e7b5f",
-    "summary.csv": "2edef3db3ceec46dc0e5a8df369366b0f9619fbc1409a99f430ce95f166cd39f",
-    "weekly.csv": "9745ce7badb90d18080bd062133e23f5f7b2eded391d523f8bc359a904dfbc5f"
+    "daily.csv": "05154f93449e1f0c9172612771a3650f86965c737254abb36454261b74f8301b",
+    "monthly.csv": "c20f36796f6a20d63a0cb2ce7445a75d1ceb92119fd099e1aafec45d90fcf735",
+    "summary.csv": "c195048307f42dfc64ca4ff8b284ff7462d817a3ebbecb48478ea4f755de6084",
+    "weekly.csv": "8120eb905f799ec75e83e00c7122725f1b9826a91b19bf76226fe4b86c3737ca"
   },
   "historical_evidence": "retrospective_legacy_research_not_A4",
   "historical_recovery": {
@@ -1159,7 +1159,8 @@
     "2026-10-11": 0.0,
     "2026-10-12": 0.0,
     "2026-10-13": 0.0,
-    "2026-10-14": 0.0
+    "2026-10-14": 0.0,
+    "2026-10-15": 0.0
   },
   "prospective_first_operating_day": "2026-10-11",
   "public_cost_per_awarded_mwh": 0.5,
@@ -1177,18 +1178,16 @@
     "rc_tier1_central.csv": "1cb1f17dda19fbb5a5c1981af9660399432a1abb72536675f1afb80405d2bb69"
   },
   "source_frozen_specification_sha256": "d8a1e16f28227a723128184f26a785eccdcfb762f76545136ac9edb4e67add00",
-  "source_package_sha256": "15fad899a6c1c5f1361fb020122737f58f0d16a9e519cd67604f484929edc224",
+  "source_package_sha256": "acbff9541b6fd0b29b705504c032f545224328fab6d0fe97901193b2558756c8",
   "template_commit": "c7545550fccca41693e9f8c5d870b39046dc9a33",
   "template_repository": "jameskim247/ptp-track-record",
   "unresolved_execution": {},
   "verified_model_net_range": {
     "bounded_pending_days": 0,
-    "known_observation_net_usd": 740985.3762,
-    "lower_usd": null,
+    "known_observation_net_usd": 745137.9673,
+    "lower_usd": 745137.9673,
     "scope": "displayed history conditional on stated historical prices and fill assumptions; not a confidence interval",
-    "unbounded_days": [
-      "2026-10-15"
-    ],
-    "upper_usd": null
+    "unbounded_days": [],
+    "upper_usd": 745137.9673
   }
 }

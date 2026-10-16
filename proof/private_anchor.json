@@ -1,8 +1,8 @@
 {
-  "canonical_record_end": "2026-10-14",
-  "canonical_record_set_sha256": "8eb112e208e73853a2227430612092b2dd9c0961dadfe9d631e0d6b4331b79c8",
+  "canonical_record_end": "2026-10-15",
+  "canonical_record_set_sha256": "0c2146ac2b7b9b2cb3ecbad3bb3d63e79394ced785d62e14d084cebd78f0137e",
   "canonical_record_start": "2026-10-11",
-  "captured_utc": "2026-10-16T17:00:02.789610+00:00",
+  "captured_utc": "2026-10-16T17:35:01.947663+00:00",
   "decision_proofs": [
     {
       "admissible": true,
@@ -130,7 +130,7 @@
   },
   "record_end": "2026-10-15",
   "record_start": "2024-01-01",
-  "records_sha256": "36124db89a1734339e8c5de6e867242de97f85c59782b2f0450eceacc8f2d710",
+  "records_sha256": "53ef0d79f46478db0a90e240e463a9e6469b7c9499315635fc0472f17cfc7ac2",
   "registry_sha256": "ea33f14f15aec1b50b9ee76802c98b0699fe079fbb685c18ab1cdd482af2cdb8",
   "schema": "caiso-paper-projection-v1",
   "series_ids": [

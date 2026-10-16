@@ -6,13 +6,13 @@ Results through **2026-10-15**. Timestamped cohort: **2026-10-11 onward**.
 
 | Book | Identified days | Modeled net, including pending |
 |---|---:|---:|
-| FX | 3/5 | Unknown |
-| F_BROAD | 4/5 | Unknown |
+| FX | 4/5 | $17,195.33–$17,500.90 |
+| F_BROAD | 5/5 | $9,359.55 |
 
 Ranges reflect unknown awards, not confidence intervals. No funded trades.
 
-Pending FX: 2026-10-07, 2026-10-14, 2026-10-15; F_BROAD: 2026-10-15.
+Pending FX: 2026-10-07, 2026-10-14.
 
-Updated 2026-10-16 17:00 UTC · Bid proofs through 2026-10-16.
+Updated 2026-10-16 17:35 UTC · Bid proofs through 2026-10-16.
 
 [Records and assumptions](README.md)

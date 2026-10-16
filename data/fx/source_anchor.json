@@ -9,10 +9,10 @@
   ],
   "book": "FX",
   "files_sha256": {
-    "daily.csv": "eabda8e5fe8ebdefa6b8064aaa77e969dd32d252909428dcc71cbd9f3f4c2d86",
-    "monthly.csv": "a1eff76c6025caa4a4c8805d8669c646789ecd7771a583ad01dfd44e1921b9bc",
-    "summary.csv": "2fda7f5acab1caf2e17602bbc9f7a0c4bce9974572cdef403bd9ba04334b56af",
-    "weekly.csv": "6ad266278ea3a6aa061c612b914f3daa6ba50ac94e8231950e4332528762d79b"
+    "daily.csv": "183251953fa687faf95f448cb232c1cd1cd2dbd296cd2dca3fc3740aeb32bbcb",
+    "monthly.csv": "dd69127b85bc4adb2125d47ad999b62b6bbb1a46c9690fb01bbf079a94a55c44",
+    "summary.csv": "b8b99f879aec53b0d74bd4b3c48a5976d3f72d103c9ee10e568ac71626e7a44a",
+    "weekly.csv": "65b268c068aa79b25c7e12d192e80807e14ce972c4c5836e2972b0c5fb0e26a6"
   },
   "historical_evidence": "retrospective_legacy_research_not_A4",
   "historical_recovery": {
@@ -1157,7 +1157,8 @@
     "2026-10-10": 0.0,
     "2026-10-11": 0.0,
     "2026-10-12": 0.0,
-    "2026-10-13": 0.0
+    "2026-10-13": 0.0,
+    "2026-10-15": 0.0
   },
   "prospective_first_operating_day": "2026-10-11",
   "public_cost_per_awarded_mwh": 0.5,
@@ -1175,7 +1176,7 @@
     "rc_tier1_central.csv": "1cb1f17dda19fbb5a5c1981af9660399432a1abb72536675f1afb80405d2bb69"
   },
   "source_frozen_specification_sha256": "d8a1e16f28227a723128184f26a785eccdcfb762f76545136ac9edb4e67add00",
-  "source_package_sha256": "15fad899a6c1c5f1361fb020122737f58f0d16a9e519cd67604f484929edc224",
+  "source_package_sha256": "acbff9541b6fd0b29b705504c032f545224328fab6d0fe97901193b2558756c8",
   "template_commit": "c7545550fccca41693e9f8c5d870b39046dc9a33",
   "template_repository": "jameskim247/ptp-track-record",
   "unresolved_execution": {
@@ -1203,12 +1204,10 @@
   },
   "verified_model_net_range": {
     "bounded_pending_days": 2,
-    "known_observation_net_usd": 1756579.6975,
-    "lower_usd": null,
+    "known_observation_net_usd": 1765458.1444,
+    "lower_usd": 1759403.4726800001,
     "scope": "displayed history conditional on stated historical prices and fill assumptions; not a confidence interval",
-    "unbounded_days": [
-      "2026-10-15"
-    ],
-    "upper_usd": null
+    "unbounded_days": [],
+    "upper_usd": 1760696.103885
   }
 }
