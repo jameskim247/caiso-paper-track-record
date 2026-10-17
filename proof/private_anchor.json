@@ -2,7 +2,7 @@
   "canonical_record_end": "2026-10-15",
   "canonical_record_set_sha256": "ac06937a1961e3b5b2819a39aca82916096cba17d0b916e7474ccc9d480c6f01",
   "canonical_record_start": "2026-10-11",
-  "captured_utc": "2026-10-17T16:54:01.379168+00:00",
+  "captured_utc": "2026-10-17T17:00:02.762988+00:00",
   "decision_proofs": [
     {
       "admissible": true,
@@ -146,7 +146,7 @@
   },
   "record_end": "2026-10-16",
   "record_start": "2024-01-01",
-  "records_sha256": "6657a476641c3e52cf21486a2f21d5c65dbeb74af03136703ecf72a284f167b8",
+  "records_sha256": "2b12b8b984bba86982125b337d4993f6703fb818b447f2b08bb38265039d27ad",
   "registry_sha256": "ea33f14f15aec1b50b9ee76802c98b0699fe079fbb685c18ab1cdd482af2cdb8",
   "schema": "caiso-paper-projection-v1",
   "series_ids": [
